@@ -10,7 +10,7 @@
 [data-theme="dark"] {
   --body-background: #181818;
   --color-primary: #F8F8F8;
-  --color-primary-accent: #E8E8E8;
+  --color-primary-accent: #b5b5b5;
   --color-primary-contrast: #ffffff;
   --bullets-border-color: #C0C0C0;
   --menu-background: #181818;
@@ -36,6 +36,7 @@ body,p,h1,h2,h3,h4,h5{
 }
 a{
   text-decoration: none;
+  color: inherit  ;
 }
 ul{
   list-style: none;
@@ -74,9 +75,6 @@ ul{
   transition: transform 0.3s ease-in-out;
   z-index: 1;
   opacity: 1;
-}
-@media only screen and (min-width: 48rem) {
-
 }
 .main-header__navigation-container--open{
   transform: translate(0, 0);
@@ -261,6 +259,12 @@ ul{
   .section-header-title{
     font-size: 2rem;
   }
+  .hero__name{
+    font-size: 2rem;
+  }
+  .hero__name-subtitle{
+    font-size: 1.4rem;
+  }
   .hero__greeting{
     font-size: 1.6rem;
   }
@@ -292,6 +296,7 @@ ul{
   max-width: 100%;
   margin: auto;
   display: block;
+  border-radius: 1rem;
 }
 @media only screen and (min-width: 31.25rem) {
   .about-me__image{
@@ -337,11 +342,15 @@ ul{
   opacity: 1;
 
 }
-.about-me__bio-paragraph{
-  font-size: .8rem;
-  margin-top: 1rem;
+.about-me__paragraph-contaneir{
+  font-size: 1rem;
+  margin: 1rem auto 0;
   letter-spacing: .125rem;
-    line-height: 1.25rem;
+  line-height: 1.25rem;
+  max-width: 60ch;
+}
+.about-me__paragraph{
+  margin-bottom: 1rem;
 }
 @media only screen and (min-width: 30rem) {
   .about-me__bio-paragraph{
@@ -383,16 +392,23 @@ ul{
   overflow-x: auto;
   padding-bottom: 1rem;
 }
-.experience__job-select-container::-webkit-scrollbar {
+.experience__jobs-select-container::-webkit-scrollbar {
   width: 5px;
   height: 5px;
-  background-color: var(--color-primary) /* or add it to the track */
+  background-color: var(--color-primary) 
 }
-.experience__job-select-container::-webkit-scrollbar-thumb {
+.experience__jobs-select-container::-webkit-scrollbar-thumb {
   background: var(--color-primary-accent)
 }
 @media (hover:none), (hover:on-demand), (pointer:coarse) { 
-  .experience__job-select-container::-webkit-scrollbar {
+  .experience__jobs-select-container{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+  }
+  .experience__jobs-select-container::-webkit-scrollbar {
+    display: none;
+}
+  .experience__jobs-select-container::-webkit-scrollbar-thumb {
     display: none;
   }
 }
@@ -479,6 +495,9 @@ ul{
 .contact__credit{
   margin-top: 1rem;
   font-weight: 300;
+}
+.contact__credit-link:visited {
+  color: var(--color-primary-accent);
 }
 @media only screen and (min-width: 29rem) {
   .contact__credits-container{

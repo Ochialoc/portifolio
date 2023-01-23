@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   Array.from(
     document.getElementsByClassName("js-main-header__navigation-list-link")
   ).forEach(function (element) {
-    element.addEventListener("click", toggleMenu);
+    element.addEventListener("click", closeMenuIfOpened);
   });
 
   document
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  document.getElementById("js-about-me__bio-paragraph").innerText =
+  document.getElementById("js-about-me__paragraph-container").innerHTML =
     BIO_ARRAY[1];
 
   Array.from(document.getElementsByClassName("js-about-me__bullet")).forEach(
@@ -111,7 +111,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function closeMenuIfOpened() {
+  const isOpen = document.getElementsByClassName(
+    "main-header__navigation-container--open"
+  ).length;
+  if (isOpen) {
+    toggleMenu();
+  }
+}
+
 function toggleMenu() {
+  console.log("toggle menu");
   const display = document.getElementById(
     "js-main-header__navigation-container"
   ).style.display;
@@ -150,30 +160,30 @@ function changeBio(event) {
     .getElementsByClassName("about-me__bullet--selected")[0]
     .classList.toggle("about-me__bullet--selected");
   event.target.classList.toggle("about-me__bullet--selected");
-  document.getElementById("js-about-me__bio-paragraph").innerText =
+  document.getElementById("js-about-me__paragraph-container").innerHTML =
     BIO_ARRAY[event.target.dataset.bio];
 }
 
-const SHORTER_BIO = "Oi, sou Felipe. Eu tento todo dia o meu melhor.";
+const SHORTER_BIO = '<p class="about-me__paragraph">Oi, eu sou Felipe.</p>';
 const SHORT_BIO =
-  "Oi, sou Felipe, formado em Ciência da Computação pela URI Erechim. Eu gosto de ler," +
-  " programar e estudar. Em geral me encontro na frente de um computador, seja a trabalho ou lazer.";
+  '<p class="about-me__paragraph">Oi, eu sou Felipe, formado em Ciência da Computação pela URI Erechim. Eu gosto de ler,' +
+  " programar e estudar. Em geral me encontro na frente de um computador, seja a trabalho ou lazer.</p>";
 const MEDIUM_BIO =
-  "Olá, sou Felipe e me formei em Ciência da Computação pela Uri Erechim. Minha rotina geralmente inclui " +
-  " aulas de yoga, cuidar de cachorros e estudar. Quando não estou no computador, seja a trabalho, seja por lazer, " +
+  '<p class="about-me__paragraph">Olá, sou Felipe e me formei em Ciência da Computação pela Uri Erechim. Minha rotina geralmente inclui ' +
+  ' aulas de yoga, cuidar de cachorros e estudar.</p><p class="about-me__paragraph"> Quando não estou no computador, seja a trabalho, seja por lazer, ' +
   "gosto de estar com a minha família ou no centro espirita. Gosto bastante de sorvete de creme." +
-  " Pelo meu peso talvez até demais.";
+  "</p>";
 const LONG_BIO =
-  "Saudações, me chamo Felipe Carlotto Ochial. Nasci em Erechim - RS em Janeiro de 1994. Antes de iniciar minha tragetória na computação" +
+  '<p class="about-me__paragraph">Saudações, me chamo Felipe Carlotto Ochial. Nasci em Erechim - RS em Janeiro de 1994.</p> <p class="about-me__paragraph">Antes de iniciar minha tragetória na computação' +
   " cursei Engenharia Mecânica e morei 1 ano no Japão em uma bolsa de estudos. Porám não me encontrei na área e " +
-  "decidi experimentar outro caminho. Ciência da Computação me cativou desde o começo, quando em 2017 iniciei " +
+  'decidi experimentar outro caminho.</p><p class="about-me__paragraph"> Ciência da Computação me cativou desde o começo, quando em 2017 iniciei ' +
   " minha jornada. Desde as resoluções de problemas no Uri Online Judge" +
-  " até os diversos sistemas operacionais que experimentei, sempre encontrei coisas novas para aprender e cada vez " +
-  "vejo mais possibilidades nesse campo. Atualmente estou trabalhando na Compass como desenvolvedor pleno." +
-  " Já programei Web, Back-End, Front-End, automação com Bash, mobile com Flutter e mais algumas aventuras que " +
-  "ficaram pelo caminho. Hoje vivo com a minha namorada em nosso apartamente com nosso cachorro. Quando não estou programando, " +
+  " até os diversos sistemas operacionais que experimentei, sempre encontrei coisas novas para aprender e cada vez mais " +
+  'vejo possibilidades nesse campo.</p> <p class="about-me__paragraph">Atualmente estou trabalhando na Compass como desenvolvedor pleno.' +
+  " Já programei para web, back-end, front-end, automação com bash, mobile com flutter e mais algumas aventuras que " +
+  'ficaram pelo caminho. Hoje vivo com a minha namorada em nosso apartamente com nosso cachorro.</p> <p class="about-me__paragraph">Quando não estou programando, ' +
   "provavelmente estou ou com minha família, ou em aulas de yoga, ou no centro Espirita ou comendo. Por falar em comer," +
-  " sorvete e sushi são uma delícia. Mas cada um no seu tempo, apesar que talvez um temaki de sorvete de creme possa surpreender.";
+  " sorvete e sushi são uma delícia. Mas cada um no seu tempo.</p>";
 const BIO_ARRAY = [SHORTER_BIO, SHORT_BIO, MEDIUM_BIO, LONG_BIO];
 
 function changeJob(event) {
