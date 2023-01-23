@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Array.from(document.getElementsByClassName("js-theme-button")).forEach(
     function (element) {
-      element.addEventListener("click", toggleTheme);
+      element.addEventListener("click", changeTheme);
     }
   );
 
@@ -141,7 +141,8 @@ function toggleMenu() {
   }, 100);
 }
 
-function toggleTheme(event) {
+function changeTheme(event) {
+  localStorage.setItem("theme", event.target.dataset.themeSelection);
   document.getElementsByTagName("body")[0].dataset.theme =
     event.target.dataset.themeSelection;
 }
@@ -171,14 +172,15 @@ const MEDIUM_BIO =
   "gosto de estar com a minha família ou no centro espírita." +
   "</p>";
 const LONG_BIO =
-  '<p class="about-me__paragraph">Saudações, me chamo Felipe Carlotto Ochial. Nasci em Erechim - RS em Janeiro de 1994.</p> <p class="about-me__paragraph">Antes de iniciar minha tragetória na computação' +
+  '<p class="about-me__paragraph">Saudações, me chamo Felipe Carlotto Ochial. Nasci em Erechim-RS em janeiro de 1994.</p> <p class="about-me__paragraph">' +
+  "Antes de iniciar minha trajetória na computação" +
   " cursei Engenharia Mecânica e morei 1 ano no Japão graças a uma bolsa de estudos. Porém não me encontrei na área e " +
   'decidi experimentar outro caminho.</p><p class="about-me__paragraph"> Ciência da Computação me cativou logo no começo, em 2017 quando iniciei ' +
   " minha jornada. Desde as resoluções de problemas no Uri Online Judge" +
   " até os diversos sistemas operacionais que experimentei, sempre encontrei coisas novas para aprender e cada vez mais " +
   'vejo possibilidades nesse campo.</p> <p class="about-me__paragraph">Atualmente estou trabalhando na Compass como desenvolvedor pleno.' +
-  " Já programei para web, back-end, front-end, automação com bash, mobile com flutter e mais algumas aventuras que " +
-  'ficaram pelo caminho. Hoje vivo com a minha namorada em nosso apartamente com nosso cachorro.</p> <p class="about-me__paragraph">Quando não estou programando, ' +
+  " Já programei para web, back-end, front-end, automação com bash, python e node, mobile com flutter e mais algumas aventuras que " +
+  'ficaram pelo caminho. Hoje vivo com a minha namorada em nosso apartamento com nosso cachorro.</p> <p class="about-me__paragraph">Quando não estou programando, ' +
   "provavelmente estou com minha família, em aulas de yoga, no centro espírita ou comendo. Por falar em comer," +
   " sorvete e sushi são uma delícia. Mas cada um no seu tempo.</p>";
 const BIO_ARRAY = [SHORTER_BIO, SHORT_BIO, MEDIUM_BIO, LONG_BIO];

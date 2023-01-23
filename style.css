@@ -25,6 +25,7 @@
 @font-face {
   font-family: Bahnschrift;
   src: url(resources/fonts/BAHNSCHRIFT\ 4.TTF);
+  font-display: block;
 }
 body{
   background-color: var(--body-background);
@@ -315,31 +316,21 @@ ul{
   margin-top: 1rem;
 }
 .about-me__bullet{
-  display: block;
+  display: flex;
   margin: 0.5rem;
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
+  background-color: transparent;
   border: solid 1px var(--bullets-border-color);
+  transition: background-color .5s cubic-bezier(0.38, 0.59, 0.36, 0.95);
 }
 .about-me__bullet:focus-visible{
   outline: solid;
-  outline-width: thick;
+  outline-width: medium;
 }
-.about-me__bullet::before{
-  opacity: 0;
-  content: "";
-  transition: opacity .5s cubic-bezier(0.38, 0.59, 0.36, 0.95);
-}
-.about-me__bullet--selected::before{
-  content: "";
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: var(--color-primary);
-  display: block;
-  border-radius: 50%;
-  opacity: 1;
-
+.about-me__bullet--selected{
+  background-color: var(--color-primary);;
 }
 .about-me__paragraph-contaneir{
   font-size: 1rem;
@@ -440,7 +431,7 @@ ul{
 .experience_job-details-item{
   letter-spacing: .125rem;
   line-height: 1.25rem;
-  margin-top: .5rem;
+  margin-top: .8rem;
 }
 @media only screen and (min-width: 28rem) {
   .experience__jobs-select-container{
@@ -467,6 +458,7 @@ ul{
     border-bottom: none;
     border-left: solid 3px;
     padding: 0 3rem 4rem 2rem;
+    margin-right: 0.4rem;
   }
   .experience__job-information-container{
     margin: 0;

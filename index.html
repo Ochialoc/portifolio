@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script>
+      document.getElementsByTagName("body")[0].dataset.theme =
+        localStorage.getItem("theme");
+    </script>
     <div class="wrapper">
       <header class="main-header">
         <section class="main-header__logo-container">
           <a href="/">
-            <img class="main-header__logo svg-filter" src = "resources/svgs/logo.svg" alt="Logo"/>
+            <img width="64" height="57" class="main-header__logo svg-filter" src = "resources/svgs/logo.svg" alt="Logo"/>
           </a>
         </section>
         <section class="main-header__nav-container">
@@ -55,7 +59,7 @@
             <h3 class="section-header-title">Home</h3>
 
             <div class="hexagon-container">
-              <img class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 1"/>
+              <img width="80" height="70" class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 1"/>
               <img class="hero__hexagon-number svg-filter" src = "resources/svgs/1.svg" alt="1"/>
             </div>
 
@@ -83,7 +87,7 @@
             <span class="section-header-stroke"></span>
 
             <div class="hexagon-container">
-              <img class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 2"/>
+              <img width="80" height="70" class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 2"/>
               <img class="about-me__hexagon-number svg-filter" src = "resources/svgs/2.svg" alt="2"/>
             </div>
 
@@ -121,7 +125,7 @@
             <h3 class="section-header-title">Experiência</h3>
 
             <div class="hexagon-container">
-              <img class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 3"/>
+              <img width="80" height="70" class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 3"/>
               <img class="experience__hexagon-number svg-filter" src = "resources/svgs/3.svg" alt="3"/>
             </div>
 
@@ -142,7 +146,7 @@
                 
                 <header class="experience_job-information-header">
                   <h4 class="experience_job-information-title">Desenvolvedor Pleno</h4>
-                  <h5 class="experience_job-information-subtitle">2019 - Presente</h5>
+                  <h5 class="experience_job-information-subtitle">Julho 2019 - Presente</h5>
                 </header>
 
                 <section class="experience_job-details-container">
@@ -155,7 +159,7 @@
                       de UX/UI.
                     </li>
                     <li class="experience_job-details-item">
-                      Automações com Bash e Python para tarefas diversas.
+                      Automações com bash, node e python para tarefas diversas.
                     </li>
                     <li class="experience_job-details-item">
                       Análise de performance de componentes e páginas.
@@ -180,7 +184,7 @@
                       Desenvolvimento do módulo Recruiter em parceria com SAP.
                     </li>
                     <li class="experience_job-details-item">
-                      Automações com Shell Script e Python em ambiente Linux.
+                      Automações com bash e python em ambiente Linux.
                     </li>
                     <li class="experience_job-details-item">
                       Participação em maratonas de programação como autor, aferidor e
@@ -217,7 +221,7 @@
           <header class="section-header">
             <span class="section-header-stroke"></span>
             <div class="hexagon-container">
-              <img class=" hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 4"/>
+              <img width="80" height="70" class=" hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 4"/>
               <img class="about-me__hexagon-number svg-filter" src = "resources/svgs/4.svg" alt="4"/>
             </div>
             <h3 class="section-header-title">Contato</h3>
