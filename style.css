@@ -233,7 +233,6 @@ ul{
   font-weight: 400;
 }
 .hero__description{
-  font-size: .8rem;
   margin-top: 0.5rem;
   letter-spacing: .125rem;
   line-height: 1.25rem;
@@ -272,7 +271,7 @@ ul{
     font-size: 2.4rem;
   }
   .hero__description{
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
   }
   .hero__link{
@@ -438,10 +437,7 @@ ul{
 .experience_job-details-container{
   margin-top: 1rem;
 }
-.experience_job-details{
-}
 .experience_job-details-item{
-  font-size: .8rem;
   letter-spacing: .125rem;
   line-height: 1.25rem;
   margin-top: .5rem;
@@ -456,9 +452,7 @@ ul{
   .experience_job-information-subtitle{
     font-size: 1.2rem;
   }
-  .experience_job-details-item{
-    font-size: 1rem;
-  }
+
 }
 @media only screen and (min-width: 43rem) {
   .experience__jobs-container{
