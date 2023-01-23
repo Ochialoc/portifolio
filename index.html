@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Felipe Carlotto Ochial</title>
+    <meta name="description" content="Portifólio de Felipe Carlotto Ochial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="main-header">
+        <section class="main-header__logo-container">
+          <a href="/">
+            <img class="main-header__logo svg-filter" src = "resources/svgs/logo.svg" alt="Logo"/>
+          </a>
+        </section>
+        <section class="main-header__nav-container">
+          <img class="main-header__menu svg-menu-filter" id="js-main-header__menu" src = "resources/svgs/menu-outline.svg" alt="Menu" tabindex="0"/>
+          <nav class="main-header__navigation-container" id="js-main-header__navigation-container">
+            <img class="main-header__close-menu" id="js-main-header__close-menu" src = "resources/svgs/close-outline.svg" alt="Close" tabindex="0"/>
+            <ul class="main-header__navigation-list">
+              <li class="main-header__navigation-list-item">
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#home">1-Home</a>
+              </li>
+              <li class="main-header__navigation-list-item">
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#about-me">2-Sobre mim</a>
+              </li>
+              <li class="main-header__navigation-list-item">
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#experience">3-Experiência</a>
+              </li>
+              <li class="main-header__navigation-list-item">
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#contact">4-Contato</a>
+              </li>
+              <li class="main-header__navigation-list-item main-header__theme-picker">
+                <span class="main-header__navigation-list-theme" id="js-theme-picker" tabindex="0">
+                  5-Tema
+                </span> 
+                <div class="main-header__navigation-themes-container" id="js-themes-container">
+                  <button class="main-header_theme-button js-theme-button" data-theme-selection="light" tabindex="0">Light</button>
+                  <button class="main-header_theme-button js-theme-button" data-theme-selection="dark" tabindex="0">Dark</button>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </header>
+      <main>
+
+        <article class="hero__container" id="home">
+          <h2 class="hero__name">Felipe Carlotto Ochial</h2>
+          <h4 class="hero__name-subtitle">Programador e Arquiteto de Sistemas</h4>
+
+          <header class="section-header">
+            <h3 class="section-header-title">Home</h3>
+
+            <div class="hexagon-container">
+              <img class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 1"/>
+              <img class="hero__hexagon-number svg-filter" src = "resources/svgs/1.svg" alt="1"/>
+            </div>
+
+            <span class="section-header-stroke"></span>
+          </header>
+          <section class="hero__content-container">
+            <p class="hero__greeting">Olá.</p>
+            <h1 class="hero__title">Eu desenvolvo experiências.</h1>
+  
+            <p class="hero__description">Desde 2017 atuo na área de programação web.
+               Participei de projetos de grande expressão, como
+               Lojas Renner, Camicado, Furukawa e Uri Online Judge (agora chamado Bee crowd).
+               Seja back-end, front-end, análise de sistemas ou automação, sou capaz de desenvolver
+               soluções para as mais variadas necessidades.
+            </p>
+            <a class="hero__link" href="#contact">
+              Entre em contato
+            </a>
+          </section>
+        </article>
+
+        <article class="about-me__container" id="about-me">
+
+          <header class="section-header">
+            <span class="section-header-stroke"></span>
+
+            <div class="hexagon-container">
+              <img class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 2"/>
+              <img class="about-me__hexagon-number svg-filter" src = "resources/svgs/2.svg" alt="2"/>
+            </div>
+
+            <h3 class="section-header-title">Sobre mim</h3>
+          </header>
+
+          <section class="about-me__bio-container">
+            <img class="about-me__image" src="https://via.placeholder.com/600x900.png" alt="Eu">
+
+            <section class="about-me__bio">
+              <h4 class="about-me__bio-call-to-action-title">Ajuste o tamanho da bio:</h4>
+
+              <div class="about-me__bullets-container">
+                <span>Curta</span>
+                <span class="about-me__bullet js-about-me__bullet" data-bio="0" tabindex="0"></span>
+                <span class="about-me__bullet js-about-me__bullet about-me__bullet--selected" data-bio="1" tabindex="0"></span>
+                <span class="about-me__bullet js-about-me__bullet" data-bio="2" tabindex="0"></span>
+                <span class="about-me__bullet js-about-me__bullet" data-bio="3" tabindex="0"></span>
+                <span>Longa</span>
+              </div>
+
+              <p class="about-me__bio-paragraph" id="js-about-me__bio-paragraph"></p>
+            </section>
+          </section>
+        </article>
+
+        <article class="experience__container" id="experience">
+
+          <header class="section-header">
+            <h3 class="section-header-title">Experiência</h3>
+
+            <div class="hexagon-container">
+              <img class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 3"/>
+              <img class="experience__hexagon-number svg-filter" src = "resources/svgs/3.svg" alt="3"/>
+            </div>
+
+            <span class="section-header-stroke"></span>
+          </header>
+
+          <section class="experience__jobs-container">
+
+            <div class="experience__jobs-select-container">
+              <span class="experience__job-select js-experience__job-select experience__job-select--selected" data-job="0" tabindex="0">Compass</span>
+              <span class="experience__job-select js-experience__job-select" data-job="1" tabindex="0">URI</span>
+              <span class="experience__job-select js-experience__job-select" data-job="2" tabindex="0">Compass</span>
+            </div>
+
+            <div class="experience__jobs-information-container">
+
+              <div class="experience__job-information-container js-experience__job-information-container  experience__job-information-container--selected">
+                
+                <header class="experience_job-information-header">
+                  <h4 class="experience_job-information-title">Desenvolvedor Pleno</h4>
+                  <h5 class="experience_job-information-subtitle">2019 - Presente</h5>
+                </header>
+
+                <section class="experience_job-details-container">
+                  <ul class="experience_job-details">
+                    <li class="experience_job-details-item">
+                      Desenvolvimento de E-commerces. Atuação em back-end e front-end.
+                    </li>
+                    <li class="experience_job-details-item">
+                      Desenvolvimento de componentes responsivos em conjunto com time
+                      de UX/UI.
+                    </li>
+                    <li class="experience_job-details-item">
+                      Automações com Bash e Python para tarefas diversas.
+                    </li>
+                    <li class="experience_job-details-item">
+                      Análise de performance de componentes e páginas.
+                    </li>
+                    <li class="experience_job-details-item">
+                      Manutenção de pacotes de release e de homologação.
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="experience__job-information-container js-experience__job-information-container">
+
+                <header class="experience_job-information-header">
+                  <h4 class="experience_job-information-title">Bolsista</h4>
+                  <h5 class="experience_job-information-subtitle">Novembro 2017 – Junho 2019</h5>
+                </header>
+
+                <section class="experience_job-details-container">
+                  <ul class="experience_job-details">
+                    <li class="experience_job-details-item">
+                      Desenvolvimento do módulo Recruiter em parceria com SAP
+                      (CakePHP).
+                    </li>
+                    <li class="experience_job-details-item">
+                      Automações com Shell Script e Python em ambiente Linux.
+                    </li>
+                    <li class="experience_job-details-item">
+                      Participação em maratonas de programação como autor, aferidor e
+                      moderador
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="experience__job-information-container js-experience__job-information-container">
+                
+                <header class="experience_job-information-header">
+                  <h4 class="experience_job-information-title">Desenvolvedor Junior</h4>
+                  <h5 class="experience_job-information-subtitle">Agosto 2017 – Outubro 2017 </h5>
+                </header>
+
+                <section class="experience_job-details-container">
+                  <ul class="experience_job-details">
+                    <li class="experience_job-details-item">
+                      DevOps (IaC, CI/CD, Warning Triggers, Pipelines).
+                    </li>
+                    <li class="experience_job-details-item">
+                      Testes automatizados (Cucumber, Capybara, Selenium).
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <article class="contact__container" id="contact">
+          
+          <header class="section-header">
+            <span class="section-header-stroke"></span>
+            <div class="hexagon-container">
+              <img class=" hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 4"/>
+              <img class="about-me__hexagon-number svg-filter" src = "resources/svgs/4.svg" alt="4"/>
+            </div>
+            <h3 class="section-header-title">Contato</h3>
+          </header>
+
+          <section class="contact__icon-container">
+            <a href="https://www.linkedin.com/in/felipe-carlotto-ochial/">
+              <img class="contact__icon svg-filter" src="/resources/svgs/linkedin.svg" alt="linkedin">
+            </a>
+            <a href="https://www.instagram.com/felipecarlottoochial/">
+              <img class="contact__icon svg-filter" src="/resources/svgs/instagram.svg" alt="instagram">
+            </a>
+            <a href="mailto:carlottodev@gmail.com?subject=Sua%20necessidade">
+              <img class="contact__icon svg-filter" src="/resources/svgs/mail.svg" alt="email">
+            </a>
+          </section>
+
+          <section class="contact__credits-container">
+            <span class="contact__credit">Built By: Felipe Carlotto Ochial</span>
+            <a href="https://www.instagram.com/nniedesign" class="contact__credit">Designed By: NNied Design</a>
+          </section>
+        </article>
+      </main>
+    </div>
+    
+    
+    <script src="script.js" defer></script>
+  </body>
+</html>
