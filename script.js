@@ -1,7 +1,17 @@
+let metrics = {};
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    // console.log(entry);
+    metrics[entry.name] = entry.startTime;
+  });
+});
+
+observer.observe({ type: "paint", buffered: true });
+observer.observe({ type: "largest-contentful-paint", buffered: true });
+
 document.addEventListener("DOMContentLoaded", function () {
   //hack to let elements in close menu not be tabbable
   let windowSize = window.innerWidth;
-  console.log(windowSize);
   if (windowSize < 768) {
     document.getElementById(
       "js-main-header__navigation-container"

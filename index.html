@@ -249,5 +249,20 @@
     
     
     <script src="script.js" defer></script>
+    <script>
+      (function () {
+        var script = document.createElement('script');
+        script.src = 'web-vitals.min.js';
+        script.onload = function () {
+          // When loading `web-vitals` using a classic script, all the public
+          // methods can be found on the `webVitals` global namespace.
+          webVitals.onCLS(console.log);
+          webVitals.onFID(console.log);
+          webVitals.onLCP(console.log);
+          console.log("Teste")
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
   </body>
 </html>
