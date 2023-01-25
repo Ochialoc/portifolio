@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,6 +7,7 @@
     <meta name="description" content="Portifólio de Felipe Carlotto Ochial">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="resources/svgs/logo.svg">
   </head>
   <body>
     <script>
@@ -15,7 +17,7 @@
     <div class="wrapper">
       <header class="main-header">
         <section class="main-header__logo-container">
-          <a href="/">
+          <a class="main-header__logo-link" href="/">
             <img width="64" height="57" class="main-header__logo svg-filter" src = "resources/svgs/logo.svg" alt="Logo"/>
           </a>
         </section>
@@ -52,11 +54,11 @@
       <main>
 
         <article class="hero__container" id="home">
-          <h2 class="hero__name">Felipe Carlotto Ochial</h2>
-          <h4 class="hero__name-subtitle">Programador e Arquiteto de Sistemas</h4>
+          <span class="hero__name">Felipe Carlotto Ochial</span>
+          <span class="hero__name-subtitle">Programador e Arquiteto de Sistemas</span>
 
           <header class="section-header">
-            <h3 class="section-header-title">Home</h3>
+            <span class="section-header-title">Home</span>
 
             <div class="hexagon-container">
               <img width="80" height="70" class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 1"/>
@@ -91,14 +93,14 @@
               <img class="about-me__hexagon-number svg-filter" src = "resources/svgs/2.svg" alt="2"/>
             </div>
 
-            <h3 class="section-header-title">Sobre mim</h3>
+            <span class="section-header-title">Sobre mim</span>
           </header>
 
           <section class="about-me__bio-container">
             <img class="about-me__image" src="/resources/images/Profile.jpg" alt="Eu">
 
             <section class="about-me__bio">
-              <h4 class="about-me__bio-call-to-action-title">Ajuste o tamanho da bio:</h4>
+              <h2 class="about-me__bio-call-to-action-title">Ajuste o tamanho da bio:</h2>
 
               <div class="about-me__bullets-container">
                 <span>Curta</span>
@@ -122,7 +124,7 @@
         <article class="experience__container" id="experience">
 
           <header class="section-header">
-            <h3 class="section-header-title">Experiência</h3>
+            <span class="section-header-title">Experiência</span>
 
             <div class="hexagon-container">
               <img width="80" height="70" class="hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 3"/>
@@ -145,8 +147,8 @@
               <div class="experience__job-information-container js-experience__job-information-container  experience__job-information-container--selected">
                 
                 <header class="experience_job-information-header">
-                  <h4 class="experience_job-information-title">Desenvolvedor Pleno</h4>
-                  <h5 class="experience_job-information-subtitle">Julho 2019 - Presente</h5>
+                  <h2 class="experience_job-information-title">Desenvolvedor Pleno</h2>
+                  <h3 class="experience_job-information-subtitle">Julho 2019 - Presente</h3>
                 </header>
 
                 <section class="experience_job-details-container">
@@ -174,8 +176,8 @@
               <div class="experience__job-information-container js-experience__job-information-container">
 
                 <header class="experience_job-information-header">
-                  <h4 class="experience_job-information-title">Bolsista</h4>
-                  <h5 class="experience_job-information-subtitle">Novembro 2017 – Junho 2019</h5>
+                  <h2 class="experience_job-information-title">Bolsista</h2>
+                  <h3 class="experience_job-information-subtitle">Novembro 2017 – Junho 2019</h3>
                 </header>
 
                 <section class="experience_job-details-container">
@@ -197,8 +199,8 @@
               <div class="experience__job-information-container js-experience__job-information-container">
                 
                 <header class="experience_job-information-header">
-                  <h4 class="experience_job-information-title">Desenvolvedor Junior</h4>
-                  <h5 class="experience_job-information-subtitle">Agosto 2017 – Outubro 2017 </h5>
+                  <h2 class="experience_job-information-title">Desenvolvedor Junior</h2>
+                  <h3 class="experience_job-information-subtitle">Agosto 2017 – Outubro 2017 </h3>
                 </header>
 
                 <section class="experience_job-details-container">
@@ -224,17 +226,17 @@
               <img width="80" height="70" class=" hexagon-size svg-filter" src = "resources/svgs/hexagon.svg" alt="Hexagon 4"/>
               <img class="about-me__hexagon-number svg-filter" src = "resources/svgs/4.svg" alt="4"/>
             </div>
-            <h3 class="section-header-title">Contato</h3>
+            <span class="section-header-title">Contato</span>
           </header>
 
           <section class="contact__icon-container">
-            <a href="https://www.linkedin.com/in/felipe-carlotto-ochial/">
+            <a class="contact__icon-link" href="https://www.linkedin.com/in/felipe-carlotto-ochial/">
               <img class="contact__icon svg-filter" src="/resources/svgs/linkedin.svg" alt="linkedin">
             </a>
-            <a href="https://www.instagram.com/felipecarlottoochial/">
+            <a class="contact__icon-link" href="https://www.instagram.com/felipecarlottoochial/">
               <img class="contact__icon svg-filter" src="/resources/svgs/instagram.svg" alt="instagram">
             </a>
-            <a href="mailto:ochialoc@gmail.com?subject=Como%possp%20ajuda-lo">
+            <a class="contact__icon-link" href="mailto:ochialoc@gmail.com?subject=Como%possp%20ajuda-lo">
               <img class="contact__icon svg-filter" src="/resources/svgs/mail.svg" alt="email">
             </a>
           </section>

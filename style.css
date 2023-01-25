@@ -57,12 +57,18 @@ ul{
   align-items: center;
   justify-content: space-between;
 }
+.main-header__logo-link{
+  display: flex;
+}
 .main-header__logo{
   width: 4rem;
 }
 .main-header__menu{
   filter:invert(9%) sepia(100%) saturate(7447%) hue-rotate(252deg) brightness(94%) contrast(92%);
   width: 4rem;
+}
+.main-header__nav-container{
+  display: flex;
 }
 .main-header__navigation-container{
   background-color: var(--menu-background);
@@ -195,6 +201,8 @@ ul{
 }
 .hero__name{
   margin-top: 2rem;
+  display: block;
+  font-weight: 700;
 }
 .hero__name-subtitle{
   color: var(--color-primary-accent);
@@ -211,6 +219,7 @@ ul{
   position: relative;
   height: max-content;
   margin: 0 1rem;
+  display: flex;
 }
 .section-header-title{
   white-space: nowrap;
@@ -312,6 +321,7 @@ ul{
   text-align: center;
   font-weight: 300;
   margin-top: 1.6rem;
+  display: block;
 }
 .about-me__bullets-container{
   display: flex;
@@ -477,6 +487,9 @@ ul{
 }
 .contact__icon{
   width: 2.6rem;
+}
+.contact__icon-link{
+  display: flex;
 }
 .contact__credits-container{
   display: flex;
