@@ -298,6 +298,7 @@ ul{
 .about-me__image{
   aspect-ratio: 2/3;
   max-width: 100%;
+  width: 100%;
   margin: auto;
   display: block;
   border-radius: 1rem;
