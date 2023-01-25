@@ -2,14 +2,39 @@ let metrics = {};
 const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     // console.log(entry);
-    metrics[entry.name] = entry.startTime;
+    const entryType = entry.entryType;
+    if (entryType === "paint") {
+      metrics[entry.name] = entry.startTime;
+    } else if (entryType === "largest-contentful-paint") {
+      metrics[entryType] = entry.startTime;
+    } else if (entryType === "first-input") {
+      const delay = entry.processingStart - entry.startTime;
+      metrics[entryType] = { delay: delay, target: entry.target };
+    } else if (entryType === "navigation") {
+      metrics[entryType] = entry;
+    } else if (entryType === "longtask") {
+      // console.log(entry);
+    } else if (entryType === "element") {
+      // console.log(entry);
+    } else if (entryType === "resource") {
+      // console.log(entry);
+    } else if (entryType === "measure") {
+      // console.log(entry);
+    }
   });
 });
 
-observer.observe({ type: "paint", buffered: true });
-observer.observe({ type: "largest-contentful-paint", buffered: true });
+// observer.observe({ type: "paint", buffered: true }); //FCP
+// observer.observe({ type: "largest-contentful-paint", buffered: true }); //LCP
+// observer.observe({ type: "first-input", buffered: true }); //FID
+// observer.observe({ type: "navigation", buffered: true }); //Page load metrics
+// observer.observe({ type: "longtask", buffered: true }); //blocking tasks
+// observer.observe({ type: "element", buffered: true }); //element load
+// observer.observe({ type: "resource", buffered: true }); //resourses load time
+// observer.observe({ type: "measure", buffered: true }); //events registered as performance.measure
 
 document.addEventListener("DOMContentLoaded", function () {
+  performance.mark("js-initial-execution:start");
   //hack to let elements in close menu not be tabbable
   let windowSize = window.innerWidth;
   if (windowSize < 768) {
@@ -109,13 +134,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const menuIsOpen = document.getElementsByClassName(
           "main-header__navigation-container--open"
         ).length;
-        console.log(menuIsOpen);
         if (menuIsOpen) {
           toggleMenu();
           return;
         }
       }
     });
+  performance.mark("js-initial-execution:end");
+  performance.measure(
+    "js-initial-execution",
+    "js-initial-execution:start",
+    "js-initial-execution:end"
+  );
 });
 
 function closeMenuIfOpened() {
@@ -128,11 +158,10 @@ function closeMenuIfOpened() {
 }
 
 function toggleMenu() {
-  console.log("toggle menu");
+  performance.mark("toggle-menu:start");
   const display = document.getElementById(
     "js-main-header__navigation-container"
   ).style.display;
-  console.log(display);
   if (display === "none") {
     document.getElementById(
       "js-main-header__navigation-container"
@@ -149,6 +178,8 @@ function toggleMenu() {
       .getElementById("js-main-header__navigation-container")
       .classList.toggle("main-header__navigation-container--open");
   }, 100);
+  performance.mark("toggle-menu:end");
+  performance.measure("toggle-menu", "toggle-menu:start", "toggle-menu:end");
 }
 
 function changeTheme(event) {
@@ -196,7 +227,6 @@ const LONG_BIO =
 const BIO_ARRAY = [SHORTER_BIO, SHORT_BIO, MEDIUM_BIO, LONG_BIO];
 
 function changeJob(event) {
-  console.log(event.target);
   document
     .getElementsByClassName("experience__job-select--selected")[0]
     .classList.toggle("experience__job-select--selected");
@@ -211,5 +241,4 @@ function changeJob(event) {
     [event.target.dataset.job].classList.toggle(
       "experience__job-information-container--selected"
     );
-  console.log(event.target.dataset.job);
 }

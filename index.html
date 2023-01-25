@@ -25,20 +25,20 @@
             <img class="main-header__close-menu" id="js-main-header__close-menu" src = "resources/svgs/close-outline.svg" alt="Close" tabindex="0"/>
             <ul class="main-header__navigation-list">
               <li class="main-header__navigation-list-item">
-                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#home">1-Home</a>
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#home">1. Home</a>
               </li>
               <li class="main-header__navigation-list-item">
-                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#about-me">2-Sobre mim</a>
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#about-me">2. Sobre mim</a>
               </li>
               <li class="main-header__navigation-list-item">
-                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#experience">3-Experiência</a>
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#experience">3. Experiência</a>
               </li>
               <li class="main-header__navigation-list-item">
-                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#contact">4-Contato</a>
+                <a class="main-header__navigation-list-link js-main-header__navigation-list-link" href="#contact">4. Contato</a>
               </li>
               <li class="main-header__navigation-list-item main-header__theme-picker">
                 <span class="main-header__navigation-list-theme" id="js-theme-picker" tabindex="0">
-                  5-Tema
+                  5. Tema
                 </span> 
                 <div class="main-header__navigation-themes-container" id="js-themes-container">
                   <button class="main-header_theme-button js-theme-button" data-theme-selection="light" tabindex="0">Light</button>
@@ -249,20 +249,20 @@
     
     
     <script src="script.js" defer></script>
-    <script>
+    <!-- <script>
       (function () {
         var script = document.createElement('script');
-        script.src = 'web-vitals.min.js';
+        script.src = 'vitals.min.js';
         script.onload = function () {
-          // When loading `web-vitals` using a classic script, all the public
-          // methods can be found on the `webVitals` global namespace.
-          webVitals.onCLS(console.log);
+          webVitals.onCLS(console.log, true);
           webVitals.onFID(console.log);
           webVitals.onLCP(console.log);
-          console.log("Teste")
+          webVitals.onFCP(console.log);
+          webVitals.onINP(console.log);
+          webVitals.onTTFB()(console.log);
         };
         document.head.appendChild(script);
       })();
-    </script>
+    </script> -->
   </body>
 </html>
